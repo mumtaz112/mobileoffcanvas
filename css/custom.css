@@ -1,0 +1,348 @@
+@charset "utf-8";
+/* CSS Document */
+body, html{
+    height: 100%;
+}
+body{
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, a, ul, li{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+a {
+    text-decoration: none !important;
+    transition: all 0.5s;
+}
+.carousel-item img {
+    width: 100%;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+div#navbarCollapse {
+    flex-direction: row-reverse;
+}
+/*Animated Mobile Hamburger Start*/
+.navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    position: absolute;
+    top: 20px;
+    transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+    top: inherit;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    top: inherit;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    top: inherit;
+    transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+    background: linear-gradient( 263deg, rgba(252,74,74,1) 0%, rgba(0,212,255,1) 100% );
+}
+.navbar-light .navbar-toggler{
+
+    border:0;
+}
+
+/*Animated Mobile Hamburger End*/
+
+.dropdown-menu.show {
+    background: #f8f9fa;
+    border: 0;
+}
+
+#menu {
+  color: #eee;
+  margin: 0;
+}
+
+#menu ul,
+#menu li {
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none
+}
+
+#menu ul {
+  height: 35px
+}
+
+#menu li {
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+#menu li:first-child {
+  border-left: none;
+  border-right: 0;
+}
+
+#menu a {
+  display: block;
+  line-height: 40px;
+  padding: 0 14px;
+  color: #fff;
+}
+
+#menu input {
+  display: none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 80px;
+  height: 35px;
+  opacity: 0;
+  cursor: pointer
+}
+
+#menu label {
+  font: bold 30px Arial;
+  display: none;
+  width: 35px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center
+}
+
+#menu label span {
+  font-size: 12px;
+  position: absolute;
+  left: 35px
+}
+
+#menu ul.menus {
+  height: auto;
+  width: 180px;
+  background: #111;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  border: 0;
+}
+
+#menu ul.menus li {
+  display: block;
+  width: 100%;
+  font: 12px Arial;
+  text-transform: none;
+}
+
+#menu li:hover ul.menus {
+  display: block
+}
+
+#menu a.home {
+  background: #c00;
+}
+
+#menu a.prett {
+  padding: 0 27px 0 14px
+}
+
+#menu a.prett::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 6px 5px;
+  border-style: solid;
+  border-color: #eee transparent transparent transparent;
+  position: absolute;
+  top: 15px;
+  right: 9px
+}
+
+#menu ul.menus .submenu {
+  display: none;
+  position: absolute;
+  left: 180px;
+  background: #111;
+  top: 0;
+  width: 180px;
+}
+
+#menu ul.menus .submenu li {
+  background: #111;
+}
+
+#menu ul.menus .has-submenu:hover .submenu {
+  display: block;
+}
+.menu-btn {
+    color: #00000080!Important;
+}
+/* Header Start */
+header .row{
+  display: flex;
+  align-items: center;
+  }
+  header .open-btn {
+      background: #ababab;
+      color: #fff;
+      border-radius: 20px;
+  }
+  body.offcanvas-active{
+    overflow:hidden;
+  }
+  .offcanvas-header{ display:none; }
+  
+  .screen-darken{
+    height: 100%;
+    width:0%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity:0;
+    visibility:hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition:opacity .2s linear, visibility 0.2s, width 2s ease-in;
+  }
+  
+  .screen-darken.active{
+    z-index:10; 
+    transition:opacity .3s ease, width 0s;
+      opacity:1;
+      width:100%;
+      visibility:visible;
+  }
+
+/* Header End */
+@media only screen and (min-device-width:520px) and (max-device-width:767px) and (orientation:portrait) {}
+@media only screen and (min-device-width:120px) and (max-device-width:750px) and (orientation:landscape) {}
+@media only screen and (min-device-width:751px) and (max-device-width:999px) and (orientation:portrait) {}
+@media only screen and (min-device-width:751px) and (max-device-width:999px) and (orientation:landscape) {}
+@media only screen and (min-device-width:1000px) and (max-device-width:1030px) and (orientation:portrait) {}
+@media only screen and (min-device-width:1000px) and (max-device-width:1030px) and (orientation:landscape) {}
+
+ @media only screen and (min-width: 1366px) and (max-width: 1920px){
+  .offcanvas-header .btn-close {
+    display: none;
+}
+header .col-md-9 .navbar-brand img {
+  display: none;
+}
+header .col-md-9 nav {
+  float: right;
+}
+ } 
+@media only screen and (min-width: 1200px) and (max-width: 1365px){
+	.navbar-brand img{
+	display: none!important;
+}
+nav#navbar_main {
+    display: flex;
+    justify-content: end;
+}
+.offcanvas-header .btn-close {
+  display: none;
+}		
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+	.navbar-brand img{
+	display: none!important;
+}
+nav#navbar_main {
+    display: flex;
+    justify-content: end;
+}
+.offcanvas-header .btn-close {
+  display: none;
+}
+}
+@media only screen and (min-width: 520px) and (max-width: 767px){}
+@media only screen and (min-width: 300px) and (max-width: 519px){
+  .logo img{
+    width: 50%!important;
+  }
+  header .col-md-9 .open-btn{
+      position: absolute;
+      top: -68px!important;
+      right: 21px!important;
+  }
+  nav{
+    background:#0d6efd;
+    
+  }
+  .mobile-offcanvas.show{
+   width: 70%!important; 
+  }
+  }
+  

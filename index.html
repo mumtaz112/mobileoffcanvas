@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, navbar, offcanvas, sidebar nav menu CSS examples" />
+<meta name="description" content="Bootstrap 5 navbar make offcanvas on responsive mobile" />  
+
+<title>Hello World</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+
+@media all and (max-width: 991px) {
+	
+	header .col-md-9 .open-btn {
+    position: absolute;
+    top: -20px;
+    right: 48px;
+}
+
+	.mobile-offcanvas{
+		visibility: hidden;
+		transform:translateX(-100%);
+	    border-radius:0; 
+		display:block;
+	    position: fixed;
+	    top: 0; left:0;
+	    height: 100%;
+	    z-index: 1200;
+	    width:80%;
+	    overflow-y: scroll;
+	    overflow-x: hidden;
+	    transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+	}
+
+	.mobile-offcanvas.show{
+		visibility: visible;
+    	transform: translateX(0);
+		width:50%;
+	}
+	.mobile-offcanvas .container, .mobile-offcanvas .container-fluid{
+		display: block;
+	}
+	.mobile-offcanvas {
+    overflow-y: hidden;
+}
+
+nav{
+	background:#0d6efd;
+	
+}
+}	
+</style>
+</head>
+<body>
+<span class="screen-darken"></span>
+<header>
+
+    	<!-- Begin: Top Row -->
+		<div class="top-row">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-6"></div>
+				<div class="col-md-6"></div>
+			  </div>
+			</div>
+		  </div>
+		  <!-- END: Top Row -->
+	
+		  <!-- Begin: Bottom Row -->
+		  <div class="bottom-row">
+		   <div class="container">
+			<div class="row">
+			<div class="col-md-3">
+			<div class="logo">
+				<img src="./images/logo.png" class="w-100">	
+			</div>	
+			</div>
+			<div class="col-md-9">
+				<button data-trigger="navbar_main" class="d-lg-none btn open-btn" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+
+
+				<!-- ============= COMPONENT ============== -->
+				<nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark p-2">
+					<div class="offcanvas-header float-right">  
+						<button class="btn-close"></button>
+					</div>
+					<a class="navbar-brand" href="#"><img src="https://marcelltechnologies.com/images/logo.png "class="w-100" ></a>
+					<div class="nav-itemss">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link text-dark" href="#"> Home </a></li>
+						<li class="nav-item"><a class="nav-link text-dark" href="#"> Company </a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link text-dark dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Services </a>
+							<ul class="dropdown-menu dropdown-menu-end">
+							  <li><a class="dropdown-item text-dark" href="#"> Digital Services</a></li>
+							  <li><a class="dropdown-item text-dark" href="#"> IT Solutions </a></li>
+							</ul>
+						</li>
+						<li class="nav-item"><a class="nav-link text-dark" href="#">Careers</a></li>
+						<li class="nav-item"><a class="nav-link text-dark" href="#">Contact Us</a></li>
+					</ul>
+				</div>
+				 </div>
+				 </div>
+				</nav>
+				<!-- ============= COMPONENT END// ============== -->
+				
+				
+				
+				</div>	
+			</div>	
+			</div>
+		   </div>  	
+		   </div>
+		   
+		  <!-- END: Bottom Row --> 	
+	
+		</header>
+<!-- Slider Start --> 
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+	<!-- Indicators -->
+	<ul class="carousel-indicators">
+	  <li data-target="#demo" data-slide-to="0" class="active"></li>
+	  <li data-target="#demo" data-slide-to="1"></li>
+	  <li data-target="#demo" data-slide-to="2"></li>
+	</ul>
+	
+	<!-- The slideshow -->
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<img src="images/la.jpg" alt="Los Angeles" width="1100" height="500">
+	  </div>
+	  <div class="carousel-item">
+		<img src="images/la.jpg" alt="Chicago" width="1100" height="500">
+	  </div>
+	  <div class="carousel-item">
+		<img src="images/la.jpg" alt="New York" width="1100" height="500">
+	  </div>
+	</div>
+	
+	<!-- Left and right controls -->
+	<a class="carousel-control-prev" href="#demo" data-slide="prev">
+	  <span class="carousel-control-prev-icon"></span>
+	</a>
+	<a class="carousel-control-next" href="#demo" data-slide="next">
+	  <span class="carousel-control-next-icon"></span>
+	</a>
+  </div>
+  
+  <!-- Slider End -->
+  
+  
+   
+   <section>
+	   <div class="container">
+		   <div class="slider responsive">
+				  <div>
+					  <h3>1</h3>
+				  </div>
+				  <div>
+					  <h3>2</h3>
+				  </div>
+				  <div>
+					  <h3>3</h3>
+				  </div>
+				  <div>
+					  <h3>4</h3>
+				  </div>
+				  <div>
+					  <h3>5</h3>
+				  </div>
+				  <div>
+					  <h3>6</h3>
+				  </div>
+				  <div>
+					  <h3>7</h3>
+				  </div>
+				  <div>
+					  <h3>8</h3>
+				  </div>
+			  </div>
+	   </div>
+   </section>
+  
+  
+  
+  
+</body>
+<script src="js/all.js"></script>
+    <script src="js/custom.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+      
+</html>
